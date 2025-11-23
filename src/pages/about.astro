@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About - Sidereal Cog" description="Learn more about Sidereal Cog">
+  <section class="about">
+    <div class="container">
+      <h1>About Sidereal Cog</h1>
+
+      <div class="content">
+        <h2 class="tagline">Engineered for the everyday</h2>
+
+        <p>
+          Sidereal Cog builds browser extensions that solve mundane problems. The kind of small frustrations you deal with every day but never quite get around to fixing.
+        </p>
+
+        <p>
+          We're not trying to revolutionize your workflow or change how you use the internet. We're just making the annoying stuff less annoying.
+        </p>
+
+        <h2>Our Approach</h2>
+
+        <p>
+          <strong>Start simple.</strong> Every extension does one thing well rather than trying to do everything adequately.
+        </p>
+
+        <p>
+          <strong>Stay practical.</strong> If it doesn't solve a real problem you've personally experienced, it doesn't get built.
+        </p>
+
+        <p>
+          <strong>Keep it clean.</strong> No bloat, no unnecessary features, no data collection. Just the tool, doing its job.
+        </p>
+
+        <h2>What We Build</h2>
+
+        <p>
+          Browser extensions for Chrome (and other Chromium browsers). Each one tackles a specific everyday problem:
+        </p>
+
+        <ul>
+          <li>Managing the small stuff that clutters your workflow</li>
+          <li>Organizing information you reference regularly</li>
+          <li>Streamlining repetitive tasks you do without thinking</li>
+        </ul>
+
+        <p>
+          If you've ever thought "there should be a simple tool for this," we probably agree.
+        </p>
+
+        <h2>Who's Behind This</h2>
+
+        <p>
+          Sidereal Cog is a solo developer project. One person building tools that solve problems they've run into, then sharing them in case they're useful to others.
+        </p>
+
+        <p>
+          No team, no venture funding, no growth metrics. Just practical extensions, engineered for everyday use.
+        </p>
+
+        <h2>Contact</h2>
+
+        <p>
+          For inquiries, collaboration opportunities, or questions about the projects:
+        </p>
+
+        <div class="contact-methods">
+          <a href="mailto:contact@siderealcog.com?subject=Inquiry" target="_blank">
+            <div class="contact-card card">
+              <h3>Email</h3>
+              <p>contact@siderealcog.com</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/Sidereal-Cog" target="_blank">
+            <div class="contact-card card">
+              <h3>GitHub</h3>
+              <p>Sidereal Cog</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  @import '../styles/global.css';
+
+  .about {
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .about :global(h1) {
+    margin-bottom: var(--sc-space-2xl);
+    text-align: center;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .tagline {
+    text-align: center;
+    color: var(--sc-blue);
+    font-size: var(--sc-text-xl);
+    font-weight: 400;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .content :global(h2) {
+    margin-top: var(--sc-space-2xl);
+    margin-bottom: var(--sc-space-md);
+  }
+
+  .content :global(p) {
+    font-size: var(--sc-text-base);
+    line-height: 1.8;
+    margin-bottom: var(--sc-space-md);
+  }
+
+  .content :global(ul) {
+    margin: var(--sc-space-md) 0;
+    padding-left: var(--sc-space-xl);
+    list-style-type: disc;
+  }
+
+  .content :global(li) {
+    font-size: var(--sc-text-base);
+    line-height: 1.8;
+    color: var(--sc-text-secondary);
+    margin-bottom: var(--sc-space-sm);
+  }
+
+  .content :global(strong) {
+    color: var(--sc-text-primary);
+    font-weight: 600;
+  }
+
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--sc-space-lg);
+    margin: var(--sc-space-xl) 0;
+  }
+
+  .contact-card {
+    text-align: center;
+  }
+
+  .contact-card :global(h3) {
+    margin-bottom: var(--sc-space-sm);
+    color: var(--sc-blue);
+  }
+
+  .contact-card :global(p) {
+    margin: 0;
+  }
+</style>

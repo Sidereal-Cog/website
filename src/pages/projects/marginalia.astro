@@ -1,0 +1,347 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Marginalia - Sidereal Cog"
+  description="Context-aware note-taking browser extension with real-time cross-device sync for Chrome, Brave, and Firefox"
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Marginalia</h1>
+      <p class="tagline">Scribbles in the sidebar</p>
+      <p class="description">
+        Context-aware note-taking that follows you as you browse. Your thoughts, organized automatically by where you are on the web.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card card">
+          <h3>Smart Organization</h3>
+          <p>
+            Notes automatically organize by page, subdomain, domain, or available everywhere.
+            The right notes appear at the right time, based on where you are on the web.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Cross-Device Sync</h3>
+          <p>
+            Sign in once and access your notes on any device with real-time sync.
+            Your thoughts travel with you, always up to date across all your browsers.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Always There</h3>
+          <p>
+            Side panel interface means your notes are just a click away, never interrupting your workflow.
+            Clean, modern design that stays out of your way.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Works Offline</h3>
+          <p>
+            Take notes without internet connection. They'll automatically sync when you reconnect.
+            Your workflow never stops.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Install and Sign In</h3>
+          <p>Install the extension from your browser's store and create an account</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Open Your Sidebar</h3>
+          <p>Click the extension icon to open your notes sidebar</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Start Typing</h3>
+          <p>Notes save automatically in the right context based on your current page</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Switch and See</h3>
+          <p>Navigate to different sites and watch relevant notes appear instantly</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-stack">
+    <div class="container">
+      <h2>Technical Details</h2>
+      <div class="tech-content">
+        <div class="tech-section">
+          <h3>Platform Support</h3>
+          <p>Available for Chrome, Brave, and Firefox browsers using modern extension APIs and side panel integration.</p>
+        </div>
+
+        <div class="tech-section">
+          <h3>Backend Infrastructure</h3>
+          <p>
+            Powered by Google Firebase with Firestore Database for cloud storage and Firebase Authentication for secure user accounts.
+            All data transmission uses encrypted HTTPS with industry-standard security practices.
+          </p>
+        </div>
+
+        <div class="tech-section">
+          <h3>Offline-First Architecture</h3>
+          <p>
+            Local caching using browser extension storage APIs ensures your notes are always accessible,
+            with automatic background sync when connected.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots">
+    <div class="container">
+      <h2>Screenshots</h2>
+      <div class="screenshot-placeholder">
+        <p>Screenshots coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="installation">
+    <div class="container">
+      <h2>Installation</h2>
+      <div class="install-grid">
+        <div class="install-card card">
+          <h3>Chrome & Brave</h3>
+          <p>Available on the Chrome Web Store</p>
+          <p class="note">Store link coming soon</p>
+        </div>
+
+        <div class="install-card card">
+          <h3>Firefox</h3>
+          <p>Available on Firefox Add-ons (AMO)</p>
+          <p class="note">Add-on link coming soon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="privacy-cta">
+    <div class="container">
+      <h2>Privacy & Security</h2>
+      <p>
+        Your privacy matters. Marginalia uses industry-standard security practices and is fully compliant with GDPR and CCPA.
+      </p>
+      <a href="/projects/marginalia/privacy" class="btn btn-primary">Read Privacy Policy</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  @import '../../styles/global.css';
+
+  .hero {
+    background: linear-gradient(135deg, var(--sc-navy) 0%, var(--sc-midnight) 100%);
+    color: var(--sc-white);
+    padding: var(--sc-space-3xl) 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    color: var(--sc-white);
+    font-size: 3rem;
+    margin-bottom: var(--sc-space-sm);
+  }
+
+  .tagline {
+    font-size: var(--sc-text-xl);
+    color: var(--sc-silver);
+    font-style: italic;
+    margin-bottom: var(--sc-space-lg);
+  }
+
+  .description {
+    font-size: var(--sc-text-lg);
+    color: var(--sc-silver);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .features {
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .features h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--sc-space-lg);
+  }
+
+  .feature-card h3 {
+    color: var(--sc-blue);
+    margin-bottom: var(--sc-space-md);
+  }
+
+  .how-it-works {
+    background-color: #f9fafb;
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .how-it-works h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--sc-space-xl);
+  }
+
+  .step {
+    text-align: center;
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    background-color: var(--sc-blue);
+    color: var(--sc-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--sc-text-xl);
+    font-weight: 600;
+    margin: 0 auto var(--sc-space-md);
+  }
+
+  .step h3 {
+    margin-bottom: var(--sc-space-sm);
+  }
+
+  .tech-stack {
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .tech-stack h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .tech-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sc-space-xl);
+  }
+
+  .tech-section h3 {
+    color: var(--sc-blue);
+    margin-bottom: var(--sc-space-sm);
+  }
+
+  .screenshots {
+    background-color: #f9fafb;
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .screenshots h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .screenshot-placeholder {
+    background-color: var(--sc-white);
+    border: 2px dashed var(--sc-silver);
+    border-radius: var(--sc-radius-md);
+    padding: var(--sc-space-3xl);
+    text-align: center;
+    color: var(--sc-text-secondary);
+  }
+
+  .installation {
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .installation h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .install-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--sc-space-lg);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .install-card {
+    text-align: center;
+  }
+
+  .install-card h3 {
+    color: var(--sc-blue);
+    margin-bottom: var(--sc-space-md);
+  }
+
+  .install-card .note {
+    font-size: var(--sc-text-sm);
+    color: var(--sc-text-secondary);
+    font-style: italic;
+  }
+
+  .privacy-cta {
+    background: var(--sc-navy);
+    color: var(--sc-white);
+    padding: var(--sc-space-3xl) 0;
+    text-align: center;
+  }
+
+  .privacy-cta h2 {
+    color: var(--sc-white);
+    margin-bottom: var(--sc-space-md);
+  }
+
+  .privacy-cta p {
+    color: var(--sc-silver);
+    font-size: var(--sc-text-lg);
+    max-width: 600px;
+    margin: 0 auto var(--sc-space-xl);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .features-grid,
+    .steps {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

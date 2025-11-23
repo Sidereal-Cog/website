@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Projects data - update with your actual projects
+const projects = [
+  {
+    title: "Marginalia",
+    description: "Context-aware note-taking browser extension that automatically organizes your thoughts by where you are on the web, with real-time cross-device sync.",
+    link: "/projects/marginalia",
+    tags: ["Chrome", "Brave", "Firefox", "Firebase", "Note Taking", "Real-time Sync"]
+  },
+  {
+    title: "Chronicler",
+    description: "Browser extension that lets you quickly import .ics calendar files into Google Calendar with a simple drag-and-drop interface.",
+    link: "/projects/chronicler",
+    tags: ["Chrome", "Brave", "Firefox", "Calendar Import", "Productivity"]
+  },
+  // Add more projects here
+];
+---
+
+<BaseLayout title="Sidereal Cog - Projects">
+  <section class="hero">
+    <div class="container">
+      <h1>Sidereal Cog</h1>
+      <p class="tagline">Engineered for the everyday</p>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      {projects.length > 0 ? (
+        <div class="project-grid">
+          {projects.map((project) => (
+            <article class="project-card card">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div class="tags">
+                {project.tags.map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+              {project.link && (
+                <a href={project.link} class="btn btn-secondary">
+                  Learn More
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">Projects coming soon.</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  @import '../styles/global.css';
+
+  .hero {
+    background: linear-gradient(135deg, var(--sc-navy) 0%, var(--sc-midnight) 100%);
+    color: var(--sc-white);
+    padding: var(--sc-space-3xl) 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    color: var(--sc-white);
+    font-size: 3rem;
+    margin-bottom: var(--sc-space-md);
+  }
+
+  .tagline {
+    font-size: var(--sc-text-lg);
+    color: var(--sc-silver);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .projects {
+    padding: var(--sc-space-3xl) 0;
+    margin-bottom: var(--sc-space-3xl);
+  }
+
+  .projects h2 {
+    margin-bottom: var(--sc-space-2xl);
+    text-align: center;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--sc-space-lg);
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sc-space-md);
+  }
+
+  .project-card h3 {
+    color: var(--sc-navy);
+    margin-bottom: var(--sc-space-sm);
+  }
+
+  .project-card p {
+    flex-grow: 1;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sc-space-sm);
+  }
+
+  .tag {
+    background-color: rgba(74, 158, 255, 0.1);
+    color: var(--sc-blue);
+    padding: var(--sc-space-xs) var(--sc-space-sm);
+    border-radius: var(--sc-radius-sm);
+    font-size: var(--sc-text-sm);
+    font-weight: 500;
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--sc-text-secondary);
+    padding: var(--sc-space-3xl) 0;
+    font-size: var(--sc-text-lg);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

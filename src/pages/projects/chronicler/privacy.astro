@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy - Chronicler"
+  description="Privacy policy for Chronicler browser extension"
+>
+  <section class="privacy-policy">
+    <div class="container">
+      <h1>Privacy Policy for Chronicler</h1>
+      <p class="last-updated">Last Updated: November 14, 2025</p>
+
+      <div class="content">
+        <h2>Overview</h2>
+        <p>
+          Chronicler ("we", "our", or "the extension") is a browser extension that imports calendar files (.ics) into Google Calendar.
+          This privacy policy explains how we collect, use, and protect your information.
+        </p>
+
+        <h2>Information We Collect</h2>
+
+        <h3>Google Account Information</h3>
+        <ul>
+          <li><strong>Email address</strong>: Used for authentication and identifying your Google Calendar</li>
+          <li><strong>User profile information</strong>: Basic profile data from your Google account</li>
+          <li><strong>OAuth tokens</strong>: Stored locally in your browser to authenticate with Google Calendar API</li>
+        </ul>
+
+        <h3>Calendar Data</h3>
+        <ul>
+          <li><strong>Calendar events</strong>: Read access to check for duplicates and write access to import events</li>
+          <li><strong>Calendar list</strong>: Access to your calendar list to allow you to choose which calendar to import to</li>
+          <li><strong>ICS file content</strong>: Processed locally in your browser to extract event data for import</li>
+        </ul>
+
+        <h3>What We Do NOT Collect</h3>
+        <ul>
+          <li>We do not store calendar events on our servers</li>
+          <li>We do not store ICS file contents on our servers</li>
+          <li>We do not track your usage of the extension</li>
+          <li>We do not collect analytics or telemetry data</li>
+          <li>We do not store your browsing history</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use the collected information solely to:</p>
+        <ul>
+          <li>Authenticate your Google account via OAuth 2.0</li>
+          <li>Read your calendar list to present available calendars</li>
+          <li>Check for duplicate events before importing</li>
+          <li>Import calendar events from .ics files to your chosen Google Calendar</li>
+          <li>Maintain your authenticated session locally in your browser</li>
+        </ul>
+
+        <h2>Data Storage and Security</h2>
+
+        <h3>Local Storage</h3>
+        <ul>
+          <li>OAuth tokens are stored locally in your browser using Chrome's extension storage API</li>
+          <li>No data is transmitted to or stored on our servers</li>
+          <li>All calendar data processing happens entirely in your browser</li>
+        </ul>
+
+        <h3>Google Calendar API</h3>
+        <ul>
+          <li>We use Google Calendar API to read and write calendar events</li>
+          <li>All communication with Google uses encrypted HTTPS connections</li>
+          <li>We follow Google's API usage policies and security best practices</li>
+        </ul>
+
+        <h3>OAuth Scopes</h3>
+        <p>Chronicler requests the following OAuth scopes from Google:</p>
+        <ul>
+          <li><code>calendar.events</code> - Create, read, update, and delete calendar events</li>
+          <li><code>calendar.readonly</code> - View calendars and calendar settings</li>
+          <li><code>userinfo.email</code> - View your email address</li>
+          <li><code>userinfo.profile</code> - View your basic profile information</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+
+        <h3>Google Calendar (Google)</h3>
+        <p>Chronicler integrates with Google Calendar API for:</p>
+        <ul>
+          <li>OAuth authentication</li>
+          <li>Reading calendar list and events</li>
+          <li>Creating new calendar events</li>
+        </ul>
+        <p>
+          Google's privacy policy applies to all data handled by Google Calendar API. For more information, visit:
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+        </p>
+
+        <h3>No Other Third Parties</h3>
+        <ul>
+          <li>We do not share your data with any third parties other than Google Calendar API</li>
+          <li>We do not sell or trade your data</li>
+          <li>We do not use your data for advertising</li>
+          <li>We do not analyze your calendar events for any purpose other than importing them</li>
+        </ul>
+
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li><strong>Revoke access</strong>: Disconnect Chronicler from your Google account at any time through Google account settings</li>
+          <li><strong>Delete local data</strong>: Uninstalling the extension removes all locally stored OAuth tokens</li>
+          <li><strong>Control calendar access</strong>: Choose which calendar to import to and review events before import</li>
+          <li><strong>Cancel imports</strong>: Stop any in-progress import operation</li>
+        </ul>
+
+        <h2>Data Retention</h2>
+        <ul>
+          <li><strong>OAuth tokens</strong>: Stored locally until you sign out or uninstall the extension</li>
+          <li><strong>Calendar events</strong>: Only accessed through Google Calendar API, never stored by Chronicler</li>
+          <li><strong>Extension uninstall</strong>: All local data is automatically deleted when you uninstall the extension</li>
+        </ul>
+
+        <h2>File Processing</h2>
+        <ul>
+          <li>ICS files are processed entirely in your browser</li>
+          <li>File contents are never uploaded to our servers</li>
+          <li>Event data is extracted and sent directly to Google Calendar API</li>
+          <li>No copy of your ICS file or its contents is retained after import completes</li>
+        </ul>
+
+        <h2>Security Measures</h2>
+        <ul>
+          <li>OAuth 2.0 authentication with Google</li>
+          <li>Encrypted HTTPS connections for all API requests</li>
+          <li>Local-only token storage using browser extension APIs</li>
+          <li>No server-side data storage or processing</li>
+          <li>Input validation to prevent malicious file processing</li>
+          <li>File size and event count limits to prevent abuse</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>
+          Chronicler is not intended for use by children under 13. We do not knowingly collect information from children under 13.
+          The extension requires a Google account, which has its own age requirements.
+        </p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. We will notify users of significant changes by:</p>
+        <ul>
+          <li>Updating the "Last Updated" date at the top of this policy</li>
+          <li>Posting a notice in the extension for material changes</li>
+        </ul>
+
+        <h2>Contact Us</h2>
+        <p>If you have questions about this privacy policy or how your data is handled, please contact us through the <a href="/about">About page</a>.</p>
+
+        <h2>Open Source</h2>
+        <p>
+          Chronicler's code is available for review. You can examine exactly how the extension handles your data
+          and verify that it operates as described in this privacy policy.
+        </p>
+
+        <h2>Legal Basis for Processing (GDPR)</h2>
+        <p>For users in the European Economic Area, our legal basis for processing your data is:</p>
+        <ul>
+          <li><strong>Consent</strong>: By authenticating with Google and using the extension, you consent to this privacy policy</li>
+          <li><strong>Contractual necessity</strong>: To provide the calendar import service you've requested</li>
+          <li><strong>Legitimate interest</strong>: To maintain and improve the extension's functionality</li>
+        </ul>
+
+        <h2>Your California Privacy Rights (CCPA)</h2>
+        <p>If you are a California resident, you have the right to:</p>
+        <ul>
+          <li>Know that we do not collect or store your personal information on our servers</li>
+          <li>Delete local data by uninstalling the extension</li>
+          <li>Opt-out of any sale of personal information (note: we do not sell personal information)</li>
+        </ul>
+
+        <hr>
+
+        <p class="final-note">
+          <strong>Chronicler</strong> is designed with privacy as a core principle. All processing happens locally in your browser,
+          and we only interact with Google Calendar API to import your events. Your calendar data remains under your control.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  @import '../../../styles/global.css';
+
+  .privacy-policy {
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .privacy-policy h1 {
+    margin-bottom: var(--sc-space-md);
+    text-align: center;
+  }
+
+  .last-updated {
+    text-align: center;
+    font-size: var(--sc-text-sm);
+    color: var(--sc-text-secondary);
+    margin-bottom: var(--sc-space-2xl);
+    font-weight: 500;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .content h2 {
+    margin-top: var(--sc-space-2xl);
+    margin-bottom: var(--sc-space-md);
+    color: var(--sc-navy);
+  }
+
+  .content h3 {
+    margin-top: var(--sc-space-lg);
+    margin-bottom: var(--sc-space-sm);
+    color: var(--sc-blue);
+    font-size: var(--sc-text-lg);
+  }
+
+  .content p,
+  .content li {
+    font-size: var(--sc-text-base);
+    line-height: 1.8;
+    color: var(--sc-text-secondary);
+  }
+
+  .content ul {
+    margin: var(--sc-space-md) 0;
+    padding-left: var(--sc-space-xl);
+  }
+
+  .content li {
+    margin-bottom: var(--sc-space-sm);
+  }
+
+  .content strong {
+    color: var(--sc-text-primary);
+  }
+
+  .content code {
+    background-color: rgba(74, 158, 255, 0.1);
+    color: var(--sc-blue);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+  }
+
+  .content hr {
+    border: none;
+    border-top: 1px solid var(--sc-silver);
+    margin: var(--sc-space-2xl) 0;
+  }
+
+  .final-note {
+    background-color: rgba(74, 158, 255, 0.1);
+    border-left: 3px solid var(--sc-blue);
+    padding: var(--sc-space-md);
+    border-radius: var(--sc-radius-sm);
+    margin-top: var(--sc-space-xl);
+    font-size: var(--sc-text-base);
+  }
+
+  .final-note strong {
+    color: var(--sc-blue);
+  }
+</style>

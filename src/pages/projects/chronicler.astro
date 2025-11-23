@@ -1,0 +1,392 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Chronicler - Sidereal Cog"
+  description="Import calendar files to Google Calendar via drag-and-drop. Browser extension for Chrome, Brave, and Firefox."
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Chronicler</h1>
+      <p class="tagline">Import calendar files to Google Calendar via drag-and-drop</p>
+      <p class="description">
+        A browser extension that makes importing .ics calendar files quick and effortless.
+        Simply drag your file, and Chronicler handles the rest.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card card">
+          <h3>Drag & Drop Interface</h3>
+          <p>
+            Simply drag an .ics file into the extension popup. No complex menus or configuration required.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Google Calendar Integration</h3>
+          <p>
+            Securely imports events directly to your Google Calendar using OAuth authentication.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Progress Tracking</h3>
+          <p>
+            Real-time progress updates during import with accurate time estimates for large files.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Error Handling</h3>
+          <p>
+            Clear error messages and partial import support. Failed events are tracked and reported.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Duplicate Detection</h3>
+          <p>
+            Intelligent duplicate detection with case-insensitive matching and option to skip duplicates.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Retry Logic</h3>
+          <p>
+            Automatic exponential backoff for rate limits and transient errors ensures reliable imports.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Import Cancellation</h3>
+          <p>
+            Cancel in-progress imports at any time. Your calendar stays clean and under your control.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Input Validation</h3>
+          <p>
+            File size limits (10MB max), type validation (.ics/.ical only), and event count limits (1000 max).
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Privacy-Focused</h3>
+          <p>
+            Calendar access only. Your data stays private and is never stored on our servers.
+          </p>
+        </div>
+
+        <div class="feature-card card">
+          <h3>Post-Import Summary</h3>
+          <p>
+            Detailed statistics showing successfully imported events and any failures.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Install & Authenticate</h3>
+          <p>Install Chronicler and sign in with your Google account</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Drag Your File</h3>
+          <p>Drag your .ics calendar file into the extension popup</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Import Complete</h3>
+          <p>Watch as your events are imported to Google Calendar with real-time progress</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-stack">
+    <div class="container">
+      <h2>Technical Details</h2>
+      <div class="tech-content">
+        <div class="tech-section">
+          <h3>Built With Modern Tools</h3>
+          <p>
+            Chronicler is built with React 19 and TypeScript for type safety and reliability.
+            Uses Tailwind CSS for a clean, responsive interface.
+          </p>
+        </div>
+
+        <div class="tech-section">
+          <h3>Google Calendar API</h3>
+          <p>
+            Secure OAuth 2.0 authentication with Google Calendar API integration.
+            Supports all standard calendar event features including recurring events.
+          </p>
+        </div>
+
+        <div class="tech-section">
+          <h3>Calendar File Parsing</h3>
+          <p>
+            Powered by ical.js for robust parsing of .ics calendar files.
+            Handles complex event data including timezones, recurrence rules, and attachments.
+          </p>
+        </div>
+
+        <div class="tech-section">
+          <h3>Cross-Browser Support</h3>
+          <p>
+            Built with Manifest V3 and webextension-polyfill for compatibility across Chrome, Brave, and Firefox.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots">
+    <div class="container">
+      <h2>Screenshots</h2>
+      <div class="screenshot-placeholder">
+        <p>Screenshots coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="installation">
+    <div class="container">
+      <h2>Installation</h2>
+      <div class="install-grid">
+        <div class="install-card card">
+          <h3>Chrome & Brave</h3>
+          <p>Available on the Chrome Web Store</p>
+          <p class="note">Store link coming soon</p>
+        </div>
+
+        <div class="install-card card">
+          <h3>Firefox</h3>
+          <p>Available on Firefox Add-ons (AMO)</p>
+          <p class="note">Add-on link coming soon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="privacy-cta">
+    <div class="container">
+      <h2>Privacy & Security</h2>
+      <p>
+        Calendar access only. Your data stays private and is never stored.
+        Chronicler only accesses your Google Calendar to import events - nothing more.
+      </p>
+      <a href="/projects/chronicler/privacy" class="btn btn-primary">Read Privacy Policy</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  @import '../../styles/global.css';
+
+  .hero {
+    background: linear-gradient(135deg, var(--sc-navy) 0%, var(--sc-midnight) 100%);
+    color: var(--sc-white);
+    padding: var(--sc-space-3xl) 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    color: var(--sc-white);
+    font-size: 3rem;
+    margin-bottom: var(--sc-space-sm);
+  }
+
+  .tagline {
+    font-size: var(--sc-text-xl);
+    color: var(--sc-silver);
+    font-style: italic;
+    margin-bottom: var(--sc-space-lg);
+  }
+
+  .description {
+    font-size: var(--sc-text-lg);
+    color: var(--sc-silver);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .features {
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .features h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--sc-space-lg);
+  }
+
+  .feature-card h3 {
+    color: var(--sc-blue);
+    margin-bottom: var(--sc-space-md);
+  }
+
+  .how-it-works {
+    background-color: #f9fafb;
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .how-it-works h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--sc-space-xl);
+  }
+
+  .step {
+    text-align: center;
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    background-color: var(--sc-blue);
+    color: var(--sc-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--sc-text-xl);
+    font-weight: 600;
+    margin: 0 auto var(--sc-space-md);
+  }
+
+  .step h3 {
+    margin-bottom: var(--sc-space-sm);
+  }
+
+  .tech-stack {
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .tech-stack h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .tech-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--sc-space-xl);
+  }
+
+  .tech-section h3 {
+    color: var(--sc-blue);
+    margin-bottom: var(--sc-space-sm);
+  }
+
+  .screenshots {
+    background-color: #f9fafb;
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .screenshots h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .screenshot-placeholder {
+    background-color: var(--sc-white);
+    border: 2px dashed var(--sc-silver);
+    border-radius: var(--sc-radius-md);
+    padding: var(--sc-space-3xl);
+    text-align: center;
+    color: var(--sc-text-secondary);
+  }
+
+  .installation {
+    padding: var(--sc-space-3xl) 0;
+  }
+
+  .installation h2 {
+    text-align: center;
+    margin-bottom: var(--sc-space-2xl);
+  }
+
+  .install-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--sc-space-lg);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .install-card {
+    text-align: center;
+  }
+
+  .install-card h3 {
+    color: var(--sc-blue);
+    margin-bottom: var(--sc-space-md);
+  }
+
+  .install-card .note {
+    font-size: var(--sc-text-sm);
+    color: var(--sc-text-secondary);
+    font-style: italic;
+  }
+
+  .privacy-cta {
+    background: var(--sc-navy);
+    color: var(--sc-white);
+    padding: var(--sc-space-3xl) 0;
+    text-align: center;
+  }
+
+  .privacy-cta h2 {
+    color: var(--sc-white);
+    margin-bottom: var(--sc-space-md);
+  }
+
+  .privacy-cta p {
+    color: var(--sc-silver);
+    font-size: var(--sc-text-lg);
+    max-width: 600px;
+    margin: 0 auto var(--sc-space-xl);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .features-grid,
+    .steps,
+    .tech-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
