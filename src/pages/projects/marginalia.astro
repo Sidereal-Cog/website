@@ -6,6 +6,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   title="Marginalia - Sidereal Cog"
   description="Context-aware note-taking browser extension with real-time cross-device sync for Chrome, Brave, and Firefox"
 >
+  <Fragment slot="head">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script is:inline src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  </Fragment>
+
   <section class="hero">
     <div class="container">
       <h1>Marginalia</h1>
@@ -110,6 +115,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             with automatic background sync when connected.
           </p>
         </div>
+
+        <div class="tech-section">
+          <h3>Open Source</h3>
+          <p>
+            Marginalia is open source software. View the code, report issues, or contribute on
+            <a href="https://github.com/Sidereal-Cog/marginalia"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="github-link">GitHub</a>.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -117,8 +133,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="screenshots">
     <div class="container">
       <h2>Screenshots</h2>
-      <div class="screenshot-placeholder">
-        <p>Screenshots coming soon</p>
+      <div class="screenshot-grid">
+        <a href="/assets/marginalia/Marginalia-1.png" class="glightbox screenshot-item">
+          <img src="/assets/marginalia/Marginalia-1.png" alt="Marginalia Screenshot 1" loading="lazy" />
+        </a>
+        <a href="/assets/marginalia/Marginalia-2.png" class="glightbox screenshot-item">
+          <img src="/assets/marginalia/Marginalia-2.png" alt="Marginalia Screenshot 2" loading="lazy" />
+        </a>
+        <a href="/assets/marginalia/Marginalia-3.png" class="glightbox screenshot-item">
+          <img src="/assets/marginalia/Marginalia-3.png" alt="Marginalia Screenshot 3" loading="lazy" />
+        </a>
+        <a href="/assets/marginalia/Marginalia-4.png" class="glightbox screenshot-item">
+          <img src="/assets/marginalia/Marginalia-4.png" alt="Marginalia Screenshot 4" loading="lazy" />
+        </a>
+        <a href="/assets/marginalia/Marginalia-5.png" class="glightbox screenshot-item">
+          <img src="/assets/marginalia/Marginalia-5.png" alt="Marginalia Screenshot 5" loading="lazy" />
+        </a>
       </div>
     </div>
   </section>
@@ -130,13 +160,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="install-card card">
           <h3>Chrome & Brave</h3>
           <p>Available on the Chrome Web Store</p>
-          <p class="note">Store link coming soon</p>
+          <a href="https://chromewebstore.google.com/detail/marginalia/dbppmaigknodpecadhnlakhglcgdjffo"
+             class="btn btn-primary"
+             target="_blank"
+             rel="noopener noreferrer">Install Extension</a>
         </div>
 
         <div class="install-card card">
           <h3>Firefox</h3>
           <p>Available on Firefox Add-ons (AMO)</p>
-          <p class="note">Add-on link coming soon</p>
+          <a href="https://addons.mozilla.org/en-US/firefox/addon/marginalia/"
+             class="btn btn-primary"
+             target="_blank"
+             rel="noopener noreferrer">Install Add-on</a>
         </div>
       </div>
     </div>
@@ -274,13 +310,32 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     margin-bottom: var(--sc-space-2xl);
   }
 
-  .screenshot-placeholder {
-    background-color: var(--sc-white);
-    border: 2px dashed var(--sc-silver);
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sc-space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .screenshot-item {
+    display: block;
     border-radius: var(--sc-radius-md);
-    padding: var(--sc-space-3xl);
-    text-align: center;
-    color: var(--sc-text-secondary);
+    overflow: hidden;
+    box-shadow: var(--sc-shadow-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .screenshot-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sc-shadow-lg);
+  }
+
+  .screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .installation {
@@ -343,5 +398,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     .steps {
       grid-template-columns: 1fr;
     }
+
+    .screenshot-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
+
+<script is:inline>
+  window.addEventListener('load', () => {
+    if (typeof GLightbox !== 'undefined') {
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: false,
+      });
+    }
+  });
+</script>
